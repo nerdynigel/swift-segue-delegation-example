@@ -22,7 +22,6 @@ class ViewController: UIViewController, PlayerEditDelegate {
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "SecondViewControllerSegue" {
-            println("Entered Segue to SecondViewController")
             let secondVC = segue.destinationViewController as SecondViewController
             secondVC.segueEditTextField = playerOneLabel.text
             secondVC.delegate = self
