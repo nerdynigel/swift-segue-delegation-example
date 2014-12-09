@@ -11,6 +11,9 @@ import UIKit
 class ViewController: UIViewController, PlayerEditDelegate {
     
     @IBOutlet weak var playerOneLabel: UILabel!
+    @IBOutlet weak var playerTwoLabel: UILabel!
+    @IBOutlet weak var playerThreeLabel: UILabel!
+    @IBOutlet weak var playerFourLabel: UILabel!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,7 +26,11 @@ class ViewController: UIViewController, PlayerEditDelegate {
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "SecondViewControllerSegue" {
             let secondVC = segue.destinationViewController as SecondViewController
-            secondVC.segueEditTextField = playerOneLabel.text
+            secondVC.seguePlayerOneEditTextField = playerOneLabel.text
+            secondVC.seguePlayerTwoEditTextField = playerTwoLabel.text
+            secondVC.seguePlayerThreeEditTextField = playerThreeLabel.text
+            secondVC.seguePlayerFourEditTextField = playerFourLabel.text
+            
             secondVC.delegate = self
         }
     }

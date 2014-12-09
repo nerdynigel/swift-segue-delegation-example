@@ -14,13 +14,26 @@ protocol PlayerEditDelegate {
 
 class SecondViewController: UIViewController {
 
-    @IBOutlet weak var editTextField: UITextField! = UITextField()
-    var segueEditTextField:String!
+    @IBOutlet weak var editPlayerOneTextField: UITextField! = UITextField()
+    
+    @IBOutlet weak var editPlayerTwoTextField: UITextField! = UITextField()
+    
+    @IBOutlet weak var editPlayerThreeTextField: UITextField! = UITextField()
+    
+    @IBOutlet weak var editPlayerFourTextField: UITextField! = UITextField()
+    
+    var seguePlayerOneEditTextField:String!
+    var seguePlayerTwoEditTextField:String!
+    var seguePlayerThreeEditTextField:String!
+    var seguePlayerFourEditTextField:String!
     var delegate:PlayerEditDelegate? = nil
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        editTextField.text = segueEditTextField
+        editPlayerOneTextField.text = seguePlayerOneEditTextField
+        editPlayerTwoTextField.text = seguePlayerTwoEditTextField
+        editPlayerThreeTextField.text = seguePlayerThreeEditTextField
+        editPlayerFourTextField.text = seguePlayerFourEditTextField
     }
 
     override func didReceiveMemoryWarning() {
@@ -30,8 +43,8 @@ class SecondViewController: UIViewController {
 
     @IBAction func doneButtonPressed(sender: AnyObject) {
         if (delegate != nil){
-            let editText:String = editTextField.text
-            let delegateInformation:String = editTextField.text
+            let editText:String = editPlayerOneTextField.text
+            let delegateInformation:String = editPlayerOneTextField.text
             delegate!.editPlayerOne(delegateInformation)
             self.navigationController?.popViewControllerAnimated(true)
         }
