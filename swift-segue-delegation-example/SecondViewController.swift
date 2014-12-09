@@ -9,17 +9,14 @@
 import UIKit
 
 protocol PlayerEditDelegate {
-    func editPlayerOne(PlayerOneName: String)
+    func editPlayer(PlayerOneName: String, PlayerTwoName: String, PlayerThreeName: String, PlayerFourName: String)
 }
 
 class SecondViewController: UIViewController {
 
     @IBOutlet weak var editPlayerOneTextField: UITextField! = UITextField()
-    
     @IBOutlet weak var editPlayerTwoTextField: UITextField! = UITextField()
-    
     @IBOutlet weak var editPlayerThreeTextField: UITextField! = UITextField()
-    
     @IBOutlet weak var editPlayerFourTextField: UITextField! = UITextField()
     
     var seguePlayerOneEditTextField:String!
@@ -38,14 +35,22 @@ class SecondViewController: UIViewController {
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
+            }
 
     @IBAction func doneButtonPressed(sender: AnyObject) {
         if (delegate != nil){
-            let editText:String = editPlayerOneTextField.text
-            let delegateInformation:String = editPlayerOneTextField.text
-            delegate!.editPlayerOne(delegateInformation)
+            let editPlayerOneText:String = editPlayerOneTextField.text
+            let editPlayerTwoText:String = editPlayerTwoTextField.text
+            let editPlayerThreeText:String = editPlayerThreeTextField.text
+            let editPlayerFourText:String = editPlayerFourTextField.text
+            
+            let playerOneDelegateInformation:String = editPlayerOneTextField.text
+            let playerTwoDelegateInformation:String = editPlayerTwoTextField.text
+            let playerThreeDelegateInformation:String = editPlayerThreeTextField.text
+            let playerFourDelegateInformation:String = editPlayerFourTextField.text
+            
+            delegate!.editPlayer(playerOneDelegateInformation, PlayerTwoName: playerTwoDelegateInformation, PlayerThreeName: playerThreeDelegateInformation, PlayerFourName: playerFourDelegateInformation)
+            
             self.navigationController?.popViewControllerAnimated(true)
         }
     }

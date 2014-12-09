@@ -35,8 +35,11 @@ class ViewController: UIViewController, PlayerEditDelegate {
         }
     }
     
-    func editPlayerOne(PlayerOneName: String) {
+    func editPlayer(PlayerOneName: String, PlayerTwoName: String, PlayerThreeName: String, PlayerFourName: String) {
         playerOneLabel.text = PlayerOneName
+        playerTwoLabel.text = PlayerTwoName
+        playerThreeLabel.text = PlayerThreeName
+        playerFourLabel.text = PlayerFourName
     }
 }
 
