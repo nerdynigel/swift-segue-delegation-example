@@ -2,7 +2,7 @@
 //  swift_segue_delegation_exampleTests.swift
 //  swift-segue-delegation-exampleTests
 //
-//  Created by Nigel Nielsen on 8/12/2014.
+//  Created by NerdyNigel on 8/12/2014.
 //  Copyright (c) 2014 NerdyNigel. All rights reserved.
 //
 
