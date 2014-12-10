@@ -39,10 +39,6 @@ class SecondViewController: UIViewController {
 
     @IBAction func doneButtonPressed(sender: AnyObject) {
         if (delegate != nil){
-            let editPlayerOneText:String = editPlayerOneTextField.text
-            let editPlayerTwoText:String = editPlayerTwoTextField.text
-            let editPlayerThreeText:String = editPlayerThreeTextField.text
-            let editPlayerFourText:String = editPlayerFourTextField.text
             
             let playerOneDelegateInformation:String = editPlayerOneTextField.text
             let playerTwoDelegateInformation:String = editPlayerTwoTextField.text
